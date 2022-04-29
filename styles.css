@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  font-size: 10px;
+  font-family:'Lobster', Cursiva;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6, a {
+  overflow-wrap: break-word;
+  text-decoration: none;
+  color: inherit;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.links{
+  background: linear-gradient(90deg, white, lightsteelblue);
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-right: 30px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  padding: 0 30px 0 30px;
+  transition: color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+li:hover{
+  box-shadow: inset 200px 0 0 0 #102361;
+  color: white;
+}
+
+.welcome {
+  display: flex;
+  background-size: cover;  
+  background-position: center;
+  background-image: linear-gradient(0deg, 
+     rgba(222,220,240,1), rgba(0,0,0,0.2), rgba(0,0,0,1)), url("https://wallpaperaccess.com//full/42277.jpg");
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  padding: 60px;
+  background: conic-gradient(at 0% 30%, #002aCB 10%, #B0D0E0 30%, #1e90ff 50%);
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  background: linear-gradient(0deg, #040404, #222222);
+  color: white;
+}
+
+.title{
+  font-size: 8rem;
+  color: white;
+  text-shadow: 2px 3px 0px black;
+}
+
+.smalltitle{
+  // text-decoration: underline;
+  font-size: 5rem;
+  color: white;
+  text-shadow: 2px 3px 0px black;
+}
+
+.text-center{
+   text-align: center;
+}
+
+.projects-container{
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.project-tile{
+  height: 15vw;
+  aspect-ratio: 5/5;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.all-items{
+  background-color: red;
+font-size: 2rem;
+padding: 1rem 3rem;
+  border-radius: 3px;
+  color: white;
+  transition: 150ms;
+}
+
+.all-items:hover{
+  background-color: darkred;
+  transform: scale(1.1);
+}
+
+.contactlinks{
+display:flex;
+gap: 20px;
+font-size: 3rem;
+}
+
+.logolink {
+  border-radius: 2px;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 300ms 0.1s;
+}
+
+  .logolink:hover {
+    transform: translateY(10px);
+    transition-delay 0ms;
+}
+
+.btn,i {
+  display: inline-block;
+  padding: 0rem 1rem;
+  border-radius: 2px;
+}
+
+footer{
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-top: 2px solid #333333;
+  padding: 10px;
+}
+
