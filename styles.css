@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -8,10 +10,20 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   height: 100%;
+  width: 100%;
   font-size: 10px;
-  font-family:'Lobster', Cursiva;
+  scroll-behavior: smooth;
+  font-family: 'Lobster', Cursiva;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
 }
 
 body {
@@ -19,26 +31,40 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
-  display: block;
+img,
+picture,
+video,
+canvas,
+svg {
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6, a {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
   overflow-wrap: break-word;
   text-decoration: none;
   color: inherit;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
-.links{
+.links {
   background: linear-gradient(90deg, white, lightsteelblue);
   font-size: 3.5rem;
   display: flex;
@@ -48,27 +74,29 @@ p, h1, h2, h3, h4, h5, h6, a {
   position: fixed;
   top: 0px;
   left: 0px;
+  z-index: 3;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-li{
+li {
   padding: 0 30px 0 30px;
   transition: color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
-li:hover{
+
+li:hover {
   box-shadow: inset 200px 0 0 0 #102361;
   color: white;
 }
 
 .welcome {
   display: flex;
-  background-size: cover;  
+  background-size: cover;
   background-position: center;
-  background-image: linear-gradient(0deg, 
-     rgba(222,220,240,1), rgba(0,0,0,0.2), rgba(0,0,0,1)), url("https://wallpaperaccess.com//full/42277.jpg");
+  background-image: linear-gradient(180deg,
+      rgba(103, 100, 240, 1), rgba(0, 0, 0, 0.2), rgba(70, 130, 250, 1)), url("back.png");
   width: 100%;
   height: 100%;
   align-items: center;
@@ -77,17 +105,35 @@ li:hover{
 }
 
 .projects {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   gap: 30px;
-  padding: 60px;
+  padding: 120px 60px 60px 60px;
   background: conic-gradient(at 0% 30%, #002aCB 10%, #B0D0E0 30%, #1e90ff 50%);
 }
 
-.contact{
+.firstsvg {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  z-index: 1;
+}
+
+.secondsvg {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(10%);
+  z-index: 1;
+  padding: 0;
+  width: 100%;
+  border: 0px;
+}
+
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -99,24 +145,23 @@ li:hover{
   color: white;
 }
 
-.title{
+.title {
   font-size: 8rem;
   color: white;
   text-shadow: 2px 3px 0px black;
 }
 
-.smalltitle{
-  // text-decoration: underline;
+.smalltitle {
   font-size: 5rem;
   color: white;
   text-shadow: 2px 3px 0px black;
 }
 
-.text-center{
-   text-align: center;
+.text-center {
+  text-align: center;
 }
 
-.projects-container{
+.projects-container {
   width: 60%;
   display: flex;
   justify-content: center;
@@ -125,50 +170,37 @@ li:hover{
   gap: 40px;
 }
 
-.project-tile{
+.project-tile {
   height: 15vw;
   aspect-ratio: 5/5;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.all-items{
-  background-color: red;
-font-size: 2rem;
-padding: 1rem 3rem;
-  border-radius: 3px;
-  color: white;
-  transition: 150ms;
-}
-
-.all-items:hover{
-  background-color: darkred;
-  transform: scale(1.1);
-}
-
-.contactlinks{
-display:flex;
-gap: 20px;
-font-size: 3rem;
+.contactlinks {
+  display: flex;
+  gap: 20px;
+  font-size: 3rem;
 }
 
 .logolink {
   border-radius: 2px;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 300ms 0.1s;
+  will-change: transform;
 }
 
-  .logolink:hover {
-    transform: translateY(10px);
-    transition-delay 0ms;
+.logolink:hover {
+  transform: translateY(10px);
 }
 
-.btn,i {
+.btn,
+i {
   display: inline-block;
   padding: 0rem 1rem;
   border-radius: 2px;
 }
 
-footer{
+footer {
   text-align: center;
   background-color: black;
   color: white;
@@ -176,3 +208,106 @@ footer{
   padding: 10px;
 }
 
+/*button styling*/
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500&display=swap');
+
+
+.button {
+  /*position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);*/
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  padding: 0;
+  z-index: 2;
+  background: transparent;
+  transition: filter 600ms;
+  will-change: filter;
+  user-select: none;
+  /* user can't select text */
+  -webkit-tap-highlight-color: transparent;
+  /* mobile won't show a rectangle when pressing */
+
+}
+
+.front {
+  display: block;
+  font-family: 'Barlow Condensed', sans-serif;
+  background: hsl(345deg, 100%, 50%);
+  padding: 15px 40px;
+  border-radius: 12px;
+  color: white;
+  font-size: 2rem;
+  transform: translateY(-5px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+  will-change: transform;
+}
+
+.button:hover {
+  transition: filter 250ms;
+  filter: brightness(110%);
+
+}
+
+.button:hover .front {
+  transform: translateY(-7px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 2);
+}
+
+.button:active .front {
+  transition: transform 34ms;
+  transform: translateY(-2px);
+
+}
+
+.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button:focus {
+  outline: 1px solid black;
+}
+
+.button:hover .shadow {
+  transform: translateY(8px);
+  transition: transform 250ms cubic-bezier(.3, .7, .4, 2);
+  ;
+}
+
+.button:active .shadow {
+  transition: transform 34ms ease;
+  transform: translateY(3px);
+}
+
+.shadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  filter: blur(2px);
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  background: hsl(220deg, 50%, 60%);
+  transform: translateY(6px);
+  transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+
+
+}
+
+.edge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      hsl(345deg, 100%, 20%) 0%,
+      hsl(345deg, 100%, 30%) 15%,
+      hsl(345deg, 100%, 30%) 85%,
+      hsl(345deg, 100%, 20%) 100%);
+  border-radius: 12px;
+  padding: 0;
+}
